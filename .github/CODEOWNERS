@@ -1,0 +1,18 @@
+# Review and approval boundaries mirror state ownership. Replace the team
+# handles with your organisation's teams and enable "Require review from
+# Code Owners" on the default branch.
+
+# Shared modules change every root that uses them.
+/modules/                       @aws-cloud-security/platform @aws-cloud-security/security-engineering
+
+# Account-level security services and state infrastructure.
+/bootstrap/                     @aws-cloud-security/security-engineering
+/account-baseline/              @aws-cloud-security/security-engineering
+/backend-config/                @aws-cloud-security/security-engineering
+
+# Environments.
+/environments/dev/              @aws-cloud-security/platform
+/environments/staging/          @aws-cloud-security/platform
+/environments/prod/             @aws-cloud-security/platform @aws-cloud-security/security-engineering
+
+/docs/terraform-state-ownership.md  @aws-cloud-security/security-engineering

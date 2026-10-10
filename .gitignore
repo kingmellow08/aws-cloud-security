@@ -1,0 +1,22 @@
+# Provider plugins and module cache
+**/.terraform/*
+
+# State is never committed. Remote roots keep it in S3; bootstrap's local
+# state is backed up out of band (docs/terraform-state-ownership.md).
+*.tfstate
+*.tfstate.*
+*.tfplan
+tfplan
+crash.log
+crash.*.log
+
+# Per-operator overrides
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+*.local.tfvars
+
+# Encrypted bootstrap state backups belong in the secure store, not git
+*.tfstate.age
+*.tfstate.gpg
